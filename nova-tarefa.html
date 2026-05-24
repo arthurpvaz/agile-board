@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileBoard — Nova Tarefa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nova-tarefa.css">
+</head>
+<body>
+    <header>
+        <h1>AgileBoard</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="kanban.html">Quadro Kanban</a>
+            <a href="nova-tarefa.html">Nova Tarefa</a>
+            <a href="#" id="btnLogout">Sair</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="pagina-titulo">
+            <h2>Nova Tarefa</h2>
+        </div>
+
+        <div class="layout">
+            <!-- Formulário -->
+            <div class="form-card">
+                <h3>Preencha os dados da tarefa</h3>
+
+                <form id="formNovaTarefa">
+                    <div class="campo">
+                        <label for="titulo">Título *</label>
+                        <input type="text" id="titulo" placeholder="Ex: Criar tela de login" maxlength="80">
+                        <span class="mensagem-erro" id="erroTitulo">Campo obrigatório.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" placeholder="Descreva o que precisa ser feito..." maxlength="300"></textarea>
+                    </div>
+
+                    <div class="linha-dupla">
+                        <div class="campo">
+                            <label for="prioridade">Prioridade *</label>
+                            <select id="prioridade">
+                                <option value="baixa">Baixa</option>
+                                <option value="media" selected>Média</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="coluna">Coluna Inicial *</label>
+                            <select id="coluna">
+                                <option value="a-fazer" selected>A Fazer</option>
+                                <option value="em-andamento">Em Andamento</option>
+                                <option value="concluido">Concluído</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="linha-dupla">
+                        <div class="campo">
+                            <label for="responsavel">Responsável</label>
+                            <input type="text" id="responsavel" placeholder="Nome do responsável" maxlength="60">
+                        </div>
+
+                        <div class="campo">
+                            <label for="dataEntrega">Data de Entrega</label>
+                            <input type="date" id="dataEntrega">
+                        </div>
+                    </div>
+
+                    <div class="form-acoes">
+                        <button type="submit" class="btn btn-primary">Salvar Tarefa</button>
+                        <button type="button" class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Prévia -->
+            <div class="previa-container">
+                <h3>Prévia do cartão</h3>
+                <div class="previa-cartao" id="previaCartao">
+                    <h4 id="previaTitulo">Título da tarefa</h4>
+                    <p id="previaDescricao"></p>
+                    <span class="prioridade-media" id="previaPrioridade">Média</span>
+                    <div class="cartao-footer">
+                        <span id="previaResponsavel">&#128100; —</span>
+                        <span id="previaData">&#128197; —</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nova-tarefa.js"></script>
+</body>
+</html>

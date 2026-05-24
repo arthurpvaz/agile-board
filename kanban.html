@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileBoard — Quadro Kanban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kanban.css">
+</head>
+<body>
+    <header>
+        <h1>AgileBoard</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="kanban.html">Quadro Kanban</a>
+            <a href="nova-tarefa.html">Nova Tarefa</a>
+            <a href="#" id="btnLogout">Sair</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="kanban-toolbar">
+            <h2>Quadro Kanban</h2>
+            <div class="acoes">
+                <label for="filtroPrioridade">Filtrar:</label>
+                <select id="filtroPrioridade">
+                    <option value="todas">Todas as prioridades</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+                <a href="nova-tarefa.html" class="btn btn-primary">+ Nova Tarefa</a>
+            </div>
+        </div>
+
+        <div class="board">
+            <!-- A Fazer -->
+            <div class="coluna coluna-a-fazer" id="coluna-a-fazer" ondragover="permitirDrop(event)" ondrop="soltarCartao(event, 'a-fazer')">
+                <div class="coluna-header">
+                    <h3>A Fazer</h3>
+                    <span class="contador" id="contador-a-fazer">0</span>
+                </div>
+                <div class="cartoes" id="cartoes-a-fazer"></div>
+            </div>
+
+            <!-- Em Andamento -->
+            <div class="coluna coluna-em-andamento" id="coluna-em-andamento" ondragover="permitirDrop(event)" ondrop="soltarCartao(event, 'em-andamento')">
+                <div class="coluna-header">
+                    <h3>Em Andamento</h3>
+                    <span class="contador" id="contador-em-andamento">0</span>
+                </div>
+                <div class="cartoes" id="cartoes-em-andamento"></div>
+            </div>
+
+            <!-- Concluído -->
+            <div class="coluna coluna-concluido" id="coluna-concluido" ondragover="permitirDrop(event)" ondrop="soltarCartao(event, 'concluido')">
+                <div class="coluna-header">
+                    <h3>Concluído</h3>
+                    <span class="contador" id="contador-concluido">0</span>
+                </div>
+                <div class="cartoes" id="cartoes-concluido"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/kanban.js"></script>
+</body>
+</html>

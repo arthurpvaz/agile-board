@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileBoard — Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>AgileBoard</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="kanban.html">Quadro Kanban</a>
+            <a href="nova-tarefa.html">Nova Tarefa</a>
+            <a href="#" id="btnLogout">Sair</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="boas-vindas">
+            <h2>Olá, <span id="nomeUsuario">Usuário</span>!</h2>
+            <p>Aqui está o resumo das suas tarefas.</p>
+        </div>
+
+        <!-- Métricas -->
+        <div class="metricas">
+            <div class="metrica-card">
+                <h3>Total de Tarefas</h3>
+                <div class="numero" id="totalTarefas">0</div>
+            </div>
+            <div class="metrica-card em-andamento">
+                <h3>Em Andamento</h3>
+                <div class="numero" id="totalEmAndamento">0</div>
+            </div>
+            <div class="metrica-card concluidas">
+                <h3>Concluídas</h3>
+                <div class="numero" id="totalConcluidas">0</div>
+            </div>
+            <div class="metrica-card vencidas">
+                <h3>Prazo Vencido</h3>
+                <div class="numero" id="totalVencidas">0</div>
+            </div>
+        </div>
+
+        <!-- Tarefas recentes -->
+        <div class="secao">
+            <div class="secao-header">
+                <h3>Tarefas Recentes</h3>
+                <a href="kanban.html" class="btn btn-secondary">Ver todas</a>
+            </div>
+
+            <div id="listaTarefas">
+                <p class="sem-tarefas">Nenhuma tarefa cadastrada ainda.</p>
+            </div>
+        </div>
+
+        <!-- Ações rápidas -->
+        <div class="secao">
+            <h3 class="secao-acoes-titulo">Ações Rápidas</h3>
+            <div class="acoes">
+                <a href="nova-tarefa.html" class="btn btn-primary">+ Nova Tarefa</a>
+                <a href="kanban.html" class="btn btn-secondary">Abrir Kanban</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

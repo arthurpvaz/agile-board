@@ -1,0 +1,136 @@
+.pagina-titulo {
+    margin-bottom: 24px;
+}
+
+.pagina-titulo h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.form-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+.form-card h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.campo input.erro,
+.campo select.erro {
+    border-color: #dc2626;
+}
+
+.mensagem-erro {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+.linha-dupla {
+    display: flex;
+    gap: 16px;
+}
+
+.linha-dupla .campo {
+    flex: 1;
+}
+
+.form-acoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.previa-container {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.previa-container h3 {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.previa-cartao {
+    background-color: white;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border-left: 4px solid #d1d5db;
+    transition: border-color 0.2s;
+}
+
+.previa-cartao h4 {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.previa-cartao p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-break: break-word;
+    display: none;
+}
+
+.previa-cartao .cartao-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
