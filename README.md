@@ -4,11 +4,11 @@ Gerenciador de tarefas no estilo Kanban desenvolvido com HTML5, CSS e JavaScript
 
 ## Páginas
 
-| Arquivo | Descrição |
-|---|---|
-| `login.html` | Tela de entrada com validação de usuário e senha |
-| `dashboard.html` | Painel com métricas e resumo das tarefas |
-| `kanban.html` | Quadro Kanban com drag-and-drop entre colunas |
+| Arquivo            | Descrição                                                |
+| ------------------ | -------------------------------------------------------- |
+| `login.html`       | Tela de entrada com validação de usuário e senha         |
+| `dashboard.html`   | Painel com métricas e resumo das tarefas                 |
+| `kanban.html`      | Quadro Kanban com drag-and-drop entre colunas            |
 | `nova-tarefa.html` | Formulário de criação de tarefa com prévia em tempo real |
 
 ## Estrutura do projeto
@@ -38,19 +38,21 @@ Abra o arquivo `login.html` diretamente no navegador.
 
 ## Usuários disponíveis
 
-| Usuário | Senha |
-|---|---|
-| admin | 1234 |
-| joao | joao123 |
-| maria | maria123 |
+| Usuário  | Senha      |
+| -------- | ---------- |
+| admin    | 1234       |
+| rafael   | rafa123    |
+| arthur   | arthur123  |
+| eduardo  | eduardo123 |
+| leonardo | leo123     |
 
 ## Persistência de dados
 
 Todos os dados são salvos no `localStorage` do navegador, sem necessidade de backend.
 
-| Chave | Conteúdo |
-|---|---|
-| `agile_usuario` | Dados da sessão do usuário logado |
+| Chave           | Conteúdo                               |
+| --------------- | -------------------------------------- |
+| `agile_usuario` | Dados da sessão do usuário logado      |
 | `agile_tarefas` | Array com todas as tarefas cadastradas |
 
 ## Funcionalidades
